@@ -1,0 +1,71 @@
+<style>
+    .table-fixed thead,
+    .table-fixed tfoot {
+        width: 97%;
+    }
+
+    .table-fixed tbody {
+        height: 230px;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .table-fixed thead,
+    .table-fixed tbody,
+    .table-fixed tfoot,
+    .table-fixed tr,
+    .table-fixed td,
+    .table-fixed th {
+        display: block;
+    }
+
+    .table-fixed tbody td,
+    .table-fixed thead>tr>th,
+    .table-fixed tfoot>tr>td {
+        float: left;
+        border-bottom-width: 0;
+    }
+</style>
+<section id="single-post">
+    <div class="container">
+        <div class="row">
+            <h1>Articulos comprados</h1>
+            <br>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table table-fixe">
+                        <thead>
+                            <tr>
+                                <th class="col-xs-2">Nombre </th>
+                                <th class="col-xs-2">Estado </th>
+                                <th class="col-xs-2">Cantidad </th>
+                                <th class="col-xs-2">Precio </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each vent}}
+                            <tr>
+                                <td class="col-xs-2"> {{this.producto.nombre}}</td>
+                                <td class="col-xs-2"> {{this.proceso}}</td>
+                                <td class="col-xs-2"> {{this.producto.cantidad}} </td>
+                                <td class="col-xs-2"> ${{this.producto.precio}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        <tfoot>
+
+                            <tr>
+                                <td class="col-xs-2 "></td>
+                                <td class="col-xs-2 "></td>
+                                <td class="col-xs-2 "></td>
+                                <td class="col-xs-2" style="font-weight:bold" >Total: ${{pre}}</td>
+                                
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

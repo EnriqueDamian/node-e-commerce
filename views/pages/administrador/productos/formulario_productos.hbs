@@ -1,0 +1,73 @@
+<style>
+
+#informacion img
+{
+  display:block;max-width:50%;height:auto;
+}
+</style>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">Crear perfil</h4>
+        <p class="card-category">Agregara un usuario</p>
+      </div>
+      <div class="card-body">
+        <form action="/administrador/AgregarProducto" method="POST" enctype="multipart/form-data">
+
+          <div class="form-group">
+            <label for="Nombre o Model">Nombre o Modelo</label>
+            <input type="text" class="form-control" name="nombre" id="nombre">
+          </div>
+
+
+          <div class="form-group">
+            <label for="Descripcion">Descripcion</label>
+            <input type="text" class="form-control" name="descripcion" id="descripcion">
+          </div>
+
+          <div class="form-group">
+            <label for="Categoria">Categoria</label>
+            <input type="text" class="form-control" name="categoria" id="categoria">
+          </div>
+
+          <div class="form-group">
+            <label for="Precio">Precio</label>
+            <input type="text" class="form-control" name="precio" id="precio">
+          </div>
+
+          <div class="form-group">
+            <label for="Cantidad">Cantidad</label>
+            <input type="text" class="form-control" name="cantidad" id="cantidad">
+          </div>
+
+          <div class="form-group">
+            <label for="Talla">Talla</label>
+            <input type="text" class="form-control" name="talla" id="talla">
+          </div>
+
+
+          <div class="form-group">
+            <label for="Foto">Ingresar imagen del Producto</label>
+            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+              <div id="informacion" class="fileinput-preview fileinput-exists thumbnail img-raised "></div>
+              <div>
+                <span class="btn btn-raised btn-round btn-rose btn-file">
+                  <span class="fileinput-new">Select image</span>
+                  <span class="fileinput-exists">Change</span>
+                  <input type="file" name="foto" id="foto" />
+                </span>
+                <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput">
+                  <i class="fa fa-times"></i> Remove</a>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar Formulario</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

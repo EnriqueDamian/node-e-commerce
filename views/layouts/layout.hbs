@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/css/animate.min.css" />
+  <link rel="stylesheet" href="/stylesheets/css/app.css" />
+  <link rel="stylesheet" href="/stylesheets/css/style.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+
+
+  {{>MenuSitioWeb}}
+
+  {{{body}}}
+
+  {{>FooterSitioWeb}}
+
+
+
+  <script src="/javascripts/js/jquery.min.js"></script>
+  <script src="/javascripts/js/Waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="/javascripts/js/bootstrap.min.js"></script>
+  <script src="/javascripts/js/main.js"></script>
+  
+  <script>
+    (function () {
+
+      $("#cart").on("click", function () {
+        $(".shopping-cart").fadeToggle("fast");
+
+        $.ajax({
+          cache: false,
+          async: true,
+          type: "GET",
+          url: '/shopping-cart',
+          data: {},
+          success: function (response) {
+            $('#shop').html('');
+            $('#shop').html(response);
+          }
+        });
+
+      });
+
+    })();
+
+      (function () {
+
+      $("#cod").on("click", function () {
+        var codigo = $("#pasar").val();
+        $.ajax({
+          cache: false,
+          async: true,
+          type: "POST",
+          url: '/BuscarCompra',
+          data: {codigo},
+          success: function (data) {
+            $('#ren').html('');
+            $('#ren').html(data);
+          }
+        });
+
+      });
+
+    })();
+
+  </script>
+
+</body>
+
+</html>

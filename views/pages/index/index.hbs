@@ -1,0 +1,24 @@
+
+
+<div>
+   <img src="/images/proyect_img/banner_index.jpg" alt="hero" class="img-responsive center-block">
+</div>
+<br>
+<br>
+<section>
+    <div class="container">
+        <div class="row">
+            {{# each ProductosCollection}}
+                <div class="col-md-4" style="opacity: 1;">
+                    <img src="/images/product_img/{{this.imagenUrl}}" alt="lifestyle-image" class="img-responsive" style="max-width: 380px;">
+                    <h2 class="subtitulos"><center>{{this.nombre}}</center></h2>
+                    <center><a href="/DetalleZapatoZapateriaDelSur/{{this._id}}" class="btn btn-success">Ver más detalles</a></center> 
+                     <br>  
+                </div>
+
+            {{/each}}
+
+        </div>
+       
+    </div>
+</section>

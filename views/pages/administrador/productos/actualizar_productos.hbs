@@ -1,0 +1,52 @@
+<div class="container">
+  <form action="/administrador/ModificarProductos/{{ProductosCollection._id}}" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" name="nombre" value="{{ProductosCollection.nombre}}"  id="nombre" >
+    </div>
+
+    <div class="form-group">
+      <label for="Descripcion">Descripcion</label>
+      <input type="text" class="form-control" name="descripcion" value="{{ProductosCollection.descripcion}}" id="apellidos" >
+    </div>
+
+    <div class="form-group">
+      <label for="Precio">Precio</label>
+      <input type="text" class="form-control" name="precio" value="{{ProductosCollection.precio}}" id="precio" >
+    </div>
+
+    <div class="form-group">
+      <label for="Categoria">Categoria</label>
+      <input type="text" class="form-control" name="categoria" value="{{ProductosCollection.categoria}}" id="categoria" >
+    </div>
+
+    <div class="form-group">
+      <label for="Cantidad">Cantidad</label>
+      <input type="text" class="form-control" name="cantidad" value="{{ProductosCollection.cantidad}}" id="cantidad" >
+    </div>
+
+    <div class="form-group">
+      <label for="Talla">Talla</label>
+      <input type="text" class="form-control" name="talla" value="{{ProductosCollection.talla}}" id="talla" >
+    </div>
+
+    <div class="form-group">
+        <label for="Foto">Ingresar imagen del Producto</label>
+        <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+          <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+            <div>
+              <span class="btn btn-raised btn-round btn-rose btn-file">
+                <span class="fileinput-new">Select image</span>
+                <span class="fileinput-exists">Change</span>
+                <input type="file" name="foto" id="foto"/>
+              </span>
+              <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput">
+              <i class="fa fa-times"></i> Remove</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  
+    <button type="submit">Enviar formulario</button>
+  </form>
+</div>

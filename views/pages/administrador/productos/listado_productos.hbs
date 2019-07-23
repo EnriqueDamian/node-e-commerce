@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title ">Productos</h4>
+                <p class="card-category">Control de los productos</p>
+            </div>
+            <div class="card-body">
+                <button onclick="location.href='/administrador/FormularioProductos'" class="btn btn-primary btn-round">
+                    <i class="material-icons">add_shopping_cart</i>
+                    Agregar Productos
+                </button>
+                </br>
+                <table class="table">
+                    <thead>
+                        <tr>
+                           
+                            <th>Imagen</th>
+                            <th>Modelo</th>
+                            <th>Descripcion</th>
+                            <th>Cantidad</th>
+                            <th>Categoria</th>
+                            <th>Talla</th>
+                            <th class="text-right">Precio</th>
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {{# each ProductosCollection}}
+                        <tr>
+                            
+                            <td><img class="card-img-top" src="/images/product_img/{{this.imagenUrl}}" class="img-responsive" style="max-width: 100px;"></td>
+                            <td>{{this.nombre}}</td>
+                            <td>{{this.descripcion}}</td>
+                            <td>{{this.cantidad}}</td>
+                            <td>{{this.categoria}}</td>
+                            <td>{{this.talla}}</td>
+                            <td class="text-right">${{this.precio}}</td>
+                            <td class="td-actions text-right">
+                              <a href="/administrador/ActualizarProductos/{{this._id}}" class="btn btn-primary">Actualizar</a>
+                              <a href="/administrador/EliminarProductos/{{this._id}}" class="btn btn-primary">Eliminar</a>
+                            </td>
+                        </tr>
+                      {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

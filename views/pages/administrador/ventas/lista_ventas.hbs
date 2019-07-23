@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title ">Ventas Realizadas</h4>
+                <p class="card-category">Control de productos vendidos</p>
+            </div>
+            <div class="card-body">
+                </br>
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                            <th># Compra</th>
+                            <th>Modelo</th>
+                            <th>comprador</th>
+                            <th>Cantidad</th>
+                            <th>Proceso de envio</th>
+                            <th>precio unidad</th>
+                            <th class="text-right">total</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# each ventas}}
+                        <tr>
+                            <td>{{this.idcompra}}</td>
+                            <td>{{this.producto.nombre}}</td>
+                            <td>{{this.comprador.nombre}}</td>
+                            <th>{{this.producto.cantidad}}</th>
+                            <td>{{this.proceso}}</td>
+                            <td>$ {{this.producto.precio}}</td>
+
+                            <td class="text-right">$ {{this.totalPrecio}}</td>
+
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

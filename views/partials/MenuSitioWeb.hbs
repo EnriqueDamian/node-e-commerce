@@ -1,0 +1,54 @@
+<header>
+    <nav class="navbar navbar-default text-center ">
+        <div class="container">
+            <div class="navbar-header logo">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="" href="/">ZAPATERIA</a>
+            </div>
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right ">
+                    {{#if login}}
+                    <li><a href="/" class="li-menu" style="margin-right: 0px;">Catalogo</a></li>
+                     <li><a href="/Miscompras" class="li-menu" style="margin-right: 0px;">Compras Realizadas</a></li>
+                    <li><a href="/logout" class="li-menu" style="margin-right: 0px;">Cerrar sesion</a></li>
+                    <li>
+                        <a href="#" id="cart">
+                            <i class="fa fa-shopping-cart"></i> Mi carrito <span class="badge">{{totalcant}}</span>
+                        </a>
+                    </li>
+
+                    {{else}}
+                    <li><a href="/" class="li-menu" style="margin-right: 0px;">Catalogo</a></li>
+                    <li><a href="/VisionZapateriaDelSur" class="li-menu" style="margin-right: 0px;">Vision</a></li>
+                    <li><a href="/MisionZapateriaDelSur" class="li-menu" style="margin-right: 0px;">Mision</a></li>
+                    <li><a href="/NosotrosZapateriaDelSur" class="li-menu" style="margin-right: 0px;">Nosotros</a></li>
+                    <li><a href="/ContactoZapateriaDelSur" class="li-menu" style="margin-right: 0px;">Contacto</a></li>
+                    <li><a href="/login" class="li-menu" style="margin-right: 0px;">Iniciar sesion</a></li>
+
+                    {{/if}}
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+           
+            <div class="shopping-cart" style="display: none">
+                <div class="shopping-cart-header" style="text-align:-webkit-auto">
+                    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">{{totalcant}}</span>
+                    <div class="shopping-cart-total">
+                        <span class="lighter-text">Total:</span>
+                        <span class="main-color-text">$ {{costo}}</span>
+                    </div>
+                </div>
+                <div id="shop"></div>
+               
+            </div>
+        </div>
+        <!--container-->
+    </nav>
+
+</header>

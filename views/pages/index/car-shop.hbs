@@ -1,0 +1,21 @@
+{{# if this.products }}
+
+<ul class="shopping-cart-items">
+    {{#each products}}
+    <li class="clearfix" style="list-style:none;">
+        <img src="/images/product_img/{{this.item.imagenUrl}}" alt="item1" style="height:50px">
+        <span class="item-name">{{this.item.nombre}}</span>
+        <span class="item-price">${{this.precio}}</span>
+        <span class="item-quantity">Cantidad: {{this.qty}}</span>
+    </li>
+    {{/each}}
+</ul>
+ <a href="/pay" class="button">Confirmar Pago</a>
+{{else}}
+<ul class="shopping-cart-items">
+    <li class="clearfix" style="list-style:none">
+        <img src="/images/proyect_img/empty_cart.svg" style="padding-left:15%" width="90%">
+    </li>
+</ul>
+
+{{/if}}

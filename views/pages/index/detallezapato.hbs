@@ -1,0 +1,27 @@
+<section id="single-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="fotorama" data-width="499" data-height="333">
+                    <img src="/images/product_img/{{ProductosCollection.imagenUrl}}" class="img-responsive" style="max-width: 420px;"></a>  
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="subtitulos">Modelo: {{ProductosCollection.nombre}}</h2>
+                <br />
+                <h3 class="subtitulos">Descripcion: {{ProductosCollection.descripcion}}</h3>
+                <br />
+                <h3 class="subtitulos" style="color:black">Categoria:  {{ProductosCollection.categoria}}</h3>
+                <br />
+                <h3 class="subtitulos" style="color:black">Precio:  ${{ProductosCollection.precio}}.00</h3>
+                <br />
+                <h3 class="subtitulos" style="color:black">Cantidad:  {{ProductosCollection.cantidad}} piezas</h3>
+                <br />
+                <h3 class="subtitulos" style="color:black">Talla:  {{ProductosCollection.talla}}</h3>
+                <br />
+                <a href="/add-to-cart/{{ProductosCollection._id}}" class="btn btn-success">AGREGAR AL CARRITO</a>
+            </div>
+        </div>
+    </div>
+</section>
+
