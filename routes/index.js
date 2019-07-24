@@ -238,6 +238,8 @@ router.get('/success', isLoggedIn, (req, res) => {
                 newRegistro.totalPrecio = payment.transactions[0].amount.total;
                 newRegistro.idcompra = payment.id;
                 newRegistro.save();
+
+                
             });
         }
     });

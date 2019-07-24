@@ -20,6 +20,7 @@ var backend= require('./routes/administrador');
 var app = express();
 
 mongoose.connect('mongodb+srv://kike:kikelol1.@zapateriasur-ars9r.azure.mongodb.net/zapateria?retryWrites=true&w=majority', {useNewUrlParser: true});
+//mongoose.connect('mongodb://localhost:27017/zapateria', {useNewUrlParser: true});
 require('./config/passport')(passport);
 paypal.configure({
   'mode': 'sandbox', //sandbox or live
